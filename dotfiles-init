@@ -1,0 +1,23 @@
+#!/bin/sh
+# dotfiles-init
+# A script to setup my dotfiles
+
+# The name of the dotfiles directory
+dir=.dotfiles
+
+echo "Creating git repo ${dir}..."
+
+# Init a bare git repository
+git init --bare $HOME/$dir
+
+# Create an alias for git that will track $HOME
+alias config='/usr/bin/git --git-dir=$HOME/$dir/ --work-tree=$HOME'
+
+# Set a repo flag to hide untracked files in $HOME
+config config --local status.showUntrackedFiles no
+
+# Add the alias to .bashrc
+echo "alias config='/usr/bin/git --git-dir=$HOME/${dir}/ --work-tree=$HOME'" >> $HOME/.bashrc
+
+echo "alias config created..."
+

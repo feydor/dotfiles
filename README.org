@@ -1,0 +1,7 @@
+#+TITLE dotfiles
+* dotfiles
+
+** Install
+#+BEGIN_SRC sh
+curl -Lks <insert_repo_here> | /bin/bash
+#+END_SRC
