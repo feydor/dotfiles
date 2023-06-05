@@ -116,5 +116,3 @@ fi
 EDITOR='emacs -nw'
 . "$HOME/.cargo/env"
 export PATH=$PATH:~/.roswell/bin
-alias dotfiles='/usr/bin/git --git-dir=/home/fffere/.dotfiles/ --work-tree=/home/fffere'
-alias config='/usr/bin/git --git-dir=/home/fffere/.dotfiles/ --work-tree=/home/fffere'

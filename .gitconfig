@@ -1,0 +1,21 @@
+[user]
+	email = victorreydev@outlook.com
+	name = feydor
+	useConfigOnly = true
+[core]
+	editor = vim
+[pretty]
+	simple = %C(auto)%h %C(magenta)%ad %C(cyan)%an%C(auto)%d %s
+	detail = %C(auto)%h %C(magenta)%ad %C(cyan)%an <%ae> / %C(magenta)%cd %C(cyan)%cn <%ce>%C(auto)%d %s
+[alias]
+	ls = log --pretty=simple --date=short --graph --all --simplify-by-decoration
+	ll = log --pretty=simple --date=short --pretty=simple
+	la = log --pretty=simple --date=short --all
+	ld = log --pretty=detail --date=short
+	lf = log --pretty=fuller --stat
+	lga = log --pretty=simple --date=short --graph --all
+	br = branch -vv
+	ap = add -p
+	st = status
+	addi = add -p
+	cm = commit
