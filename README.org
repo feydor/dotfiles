@@ -1,7 +1,8 @@
-#+TITLE dotfiles
+#+title: dotfiles
+
 * dotfiles
 
 ** Install
 #+BEGIN_SRC sh
-curl -Lks <insert_repo_here> | /bin/bash
+curl -Lks https://github.com/feydor/dotfiles | /bin/bash
 #+END_SRC
