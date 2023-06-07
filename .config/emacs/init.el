@@ -12,14 +12,15 @@
 ;; light green: honeydew
 ;(set-background-color ivory1)
 ;; Use my custom theme fshirotelin-them.el
-(load-theme 'fshirotelin t)
+;(load-theme 'fshirotelin t)
+(load-theme 'manoj-dark t)
 
 ;; Use spaces, not tabs, for indentation.
 (setq-default indent-tabs-mode nil)
 
 ;; use CUA mode
-(cua-mode t)
-(setq cua-keep-region-after-copy t) ;; Standard Windows behaviour
+;(cua-mode t)
+;(setq cua-keep-region-after-copy t) ;; Standard Windows behaviour
 
 ;; Highlight matching pairs of parentheses.
 (setq show-paren-delay 0)
@@ -41,7 +42,7 @@
   (package-refresh-contents))
 
 ;; Install packages.
-(dolist (package '(slime paredit markdown-mode comment-tags))
+(dolist (package '(slime paredit markdown-mode google-this))
   (unless (package-installed-p package)
     (package-install package)))
 
@@ -77,6 +78,10 @@
 (use-package autothemer
   :ensure t)
 
+;; google from emacs using C-x g RET
+(google-this-mode 1)
+(global-set-key (kbd "C-x g") 'google-this-mode-submap)
+
 ;; save/restore opened files and windows config
 (desktop-save-mode 1)
 
@@ -102,14 +107,6 @@
 
 ;;; Org mode
 
-;; Must do this so the agenda knows where to look for my files
-(setq org-agenda-files '("~/Documents/Poemata"))
-;; Follow the links
-(setq org-return-follows-link  t)
-;; Associate all org files with org mode
-(add-to-list 'auto-mode-alist '("\\.org\\'" . org-mode))
-;; Make the indentation look nicer
-(add-hook 'org-mode-hook 'org-indent-mode)
 ;; Shortcuts for storing links, viewing the agenda, and starting a capture
 (define-key global-map "\C-cl" 'org-store-link)
 (define-key global-map "\C-ca" 'org-agenda)

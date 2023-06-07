@@ -1,7 +1,4 @@
-#+title: dotfiles
-
 * dotfiles
-
 ** Install
 #+BEGIN_SRC sh
 curl -Lks https://github.com/feydor/dotfiles | /bin/bash
